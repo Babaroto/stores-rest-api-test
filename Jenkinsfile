@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('version'){
+        stage('Version'){
             steps{
             echo 'Revisando la version de python'
-            sh 'python3 --version'
+            sh 'python --version'
             echo 'Terminando la revision de python'
             }
         }
