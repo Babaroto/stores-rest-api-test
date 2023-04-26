@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        stage('version'){
+            steps{
+            sh 'python3 --version'
+            }
+        }
+        
         stage('Setup') {
             steps {
                 echo 'Creando entorno virtual de python3'
