@@ -5,6 +5,7 @@ pipeline {
         stage('Setup') {
             steps {
                 echo 'Creando entorno virtual de python3'
+                sh 'pip install virtualenv'
                 sh 'python3.11 -m venv venv'
                 echo 'Instalando Dependencias'
                 sh 'source venv/bin/activate'
