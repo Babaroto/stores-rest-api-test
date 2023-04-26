@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages {
-    stages('Setup'){
+    stage('Setup'){
         steps{
         sh 'python3.11 -m venv venv'
         sh 'source venv/bin/activate'
