@@ -15,7 +15,9 @@ pipeline {
 
         stage('Run tests') {
             steps {
-                sh '. venv/bin/activate'
+                echo 'Activando entorno virtual'
+                sh 'source venv/bin/activate'
+                echo 'Ejecutando pruebas'
                 sh 'pytest test/'
             }
         }
