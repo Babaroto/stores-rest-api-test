@@ -4,10 +4,12 @@ pipeline {
     stages {
         stage('version'){
             steps{
+            echo 'Revisando la version de python'
             sh 'python3 --version'
+            echo 'Terminando la revision de python'
             }
         }
-        
+
         stage('Setup') {
             steps {
                 echo 'Creando entorno virtual de python3'
