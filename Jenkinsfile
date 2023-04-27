@@ -2,6 +2,13 @@ pipeline {
     agent any
 
     stages {
+
+        stage('Checkout'){
+            steps{
+            checkout([$class: 'GitSCM', branches: [[name: 'master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Babaroto/stores-rest-api-test.git' ]]])
+            }
+        }
+
         stage('Version'){
             steps{
             echo 'Revisando la version de python'
