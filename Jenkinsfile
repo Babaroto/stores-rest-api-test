@@ -14,7 +14,7 @@ pipeline {
         stage('Version'){
             steps{
             echo 'Revisando la version de python'
-            bat 'python --version'
+            bat 'python3 --version'
             echo 'Terminando la revision de python'
             }
         }
