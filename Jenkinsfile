@@ -5,7 +5,9 @@ pipeline {
 
         stage('Checkout'){
             steps{
+            echo "Iniciando comprobaciones"
             checkout([$class: 'GitSCM', branches: [[name: 'master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Babaroto/stores-rest-api-test.git' ]]])
+            echo "Terminando comprobaciones"
             }
         }
 
